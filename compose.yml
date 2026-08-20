@@ -1,0 +1,6 @@
+services:
+  app: {build: ., env_file: .env, depends_on: {db: {condition: service_healthy}, redis: {condition: service_healthy}}}
+  nginx: {image: nginx:1.27-alpine, ports: ["8080:80"], volumes: ["./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro", ".:/var/www/html"], depends_on: [app]}
+  db: {image: postgres:17-alpine, environment: {POSTGRES_DB: oryx_main, POSTGRES_USER: oryx, POSTGRES_PASSWORD: secret}, ports: ["5434:5432"], healthcheck: {test: ["CMD-SHELL", "pg_isready -U oryx"], interval: 5s, timeout: 5s, retries: 10}, volumes: ["db_data:/var/lib/postgresql/data"]}
+  redis: {image: redis:7-alpine, healthcheck: {test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 3s, retries: 10}}
+volumes: {db_data: {}}

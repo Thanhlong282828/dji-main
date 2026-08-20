@@ -1,0 +1,11 @@
+FOUNDATION FEATURE MAP
+
+MySQL configuration: .env, .env.example
+Module runtime: config/modules.php, Modules/*/module.json, composer.json
+Brand layout/navigation: resources/views/layouts/site.blade.php
+Homepage/product motion: resources/views/home.blade.php, resources/css/schema.css, resources/js/app.js, resources/ts/schema.ts
+Product catalog: app/Models/ProductModule.php, app/Http/Controllers/ProductController.php, resources/views/products/*
+Article presentation: app/Http/Controllers/ArticleController.php, resources/views/articles/show.blade.php
+Public routes: routes/web.php
+Realtime: config/broadcasting.php, config/reverb.php, routes/channels.php
+Pending boundary migration: move current app-level product/article reads into Modules and replace database reads with AdminApiClient DTO queries.

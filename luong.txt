@@ -1,0 +1,5 @@
+PUBLIC CONTENT FLOW
+GET / -> HomeController -> Redis/database cache -> published Article read model -> Blade -> CSS/JS reveal/parallax.
+GET /bai-viet/{slug} -> ArticleController -> published scope -> article + related -> editorial Blade.
+Target microservice sync: dji-admin publishes ArticlePublished event -> queue listener/webhook -> dji-main upserts local read model -> forgets home.articles cache -> websocket notification.
+Product discovery: Header -> /san-pham -> pillar anchor -> /san-pham/{slug} -> capabilities/outcomes -> demo CTA.

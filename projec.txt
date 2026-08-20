@@ -1,0 +1,11 @@
+FEATURE MAP — PUBLIC
+Landing/news UI: resources/views/home.blade.php, resources/css/app.css, resources/js/app.js
+Article page: resources/views/articles/show.blade.php
+MVC/cache: HomeController, ArticleController, Article model
+Real editorial seed: database/seeders/ArticleSeeder.php
+Healthcheck: GET /health. Feature test: tests/Feature/HomePageTest.php
+Infrastructure: Dockerfile, compose.yml, docker/nginx/default.conf, .github/workflows/ci.yml
+Modules/CQRS shell: app/Modules/Content/{Domain,Application,Infrastructure,Presentation}
+Enterprise product catalog: config/hrm.php, ProductModule model/migration/seeder, ProductController, views/products/*.blade.php.
+Global navigation + mobile menu: resources/views/layouts/site.blade.php, resources/js/app.js.
+SCHEMA motion system: resources/css/schema.css; reveal, orbit, glass nav, responsive product grids.

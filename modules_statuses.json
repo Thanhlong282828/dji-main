@@ -1,0 +1,17 @@
+{
+    "Core": true,
+    "Home": true,
+    "Product": true,
+    "ProductCategory": true,
+    "Article": true,
+    "ArticleCategory": true,
+    "Media": true,
+    "Page": true,
+    "Menu": true,
+    "Search": true,
+    "Contact": true,
+    "Newsletter": true,
+    "Seo": true,
+    "Analytics": true,
+    "Api": true
+}

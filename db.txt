@@ -1,0 +1,4 @@
+DATABASE BLUEPRINT — dji-main
+articles: read model gồm title, slug, excerpt, body, category, hero_image CDN, author, status, featured, published_at, soft delete.
+Production target: đồng bộ read model từ dji-admin bằng API/event; Redis cache 5 phút. DBeaver kết nối tới PostgreSQL/MySQL qua thông số .env.
+product_modules: catalog 23 phân hệ gồm code, slug URL, pillar, nội dung, capabilities/outcomes JSON, thứ tự và cờ hiển thị. Dữ liệu seed nằm tại config/hrm.php.
